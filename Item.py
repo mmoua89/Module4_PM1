@@ -2,7 +2,7 @@
 An item class that represent an item name, price, and quantity
 """
 class Item:
-    def __init__(self, item_name, item_price, item_quantity):
+    def __init__(self, item_name="none", item_price=0.0, item_quantity=0):
         """
         Default constructor
         :param item_name: item name -> str
@@ -20,7 +20,7 @@ class Item:
         """
         return self.item_quantity * self.item_price
 
-    def display_item_name_and_cost(self):
+    def print_item_cost(self):
         """
         Display the item name and the total cost
         :return: void

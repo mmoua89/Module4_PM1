@@ -27,7 +27,7 @@ def main():
     print('TOTAL COST')
     reversed_cart = list(cart)[::-1]
     for item in reversed_cart:
-        item.display_item_name_and_cost()
+        item.print_item_cost()
 
     # calculate the total cost out of the cart
     total = 0
