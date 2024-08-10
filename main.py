@@ -32,7 +32,7 @@ def main():
     # calculate the total cost out of the cart
     total = 0
     for item in cart:
-        total += item.total_cost()
+        total += item.calculate_total_cost()
 
     # print the total cost
     print(f'Total: ${total:.2f}')
