@@ -8,18 +8,18 @@ from Item import Item
 def main():
     # a cart ready to add item(s)
     cart = set()
-    for i in range(2):
-        print(f'Item {i + 1}')
-        item_name = input('Enter the item name:\n')
-        item_price = input('Enter the item price:\n')
-        item_quantity = input('Enter the item quantity\n')
+    for itemNumber in range(0, 2, 1):
+        print(f'Item {itemNumber + 1}')
+        itemName = input('Item name:\n')
+        itemPrice = input('Item price:\n')
+        itemQuantity = input('Item quantity\n')
 
         # valid item_price and item_quantity
-        if not valid_numbers(item_price, item_quantity):
+        if not valid_numbers(itemPrice, itemQuantity):
             return
 
         # append item in (Item) class
-        item = Item(item_name, float(item_price), int(item_quantity))
+        item = Item(itemName, float(itemPrice), int(itemQuantity))
         # add an item into the cart
         cart.add(item)
 

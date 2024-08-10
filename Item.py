@@ -2,30 +2,28 @@
 An item class that represent an item name, price, and quantity
 """
 class Item:
-    def __init__(self, item_name="none", item_price=0.0, item_quantity=0):
+    def __init__(self, itemName="none", itemPrice=0.0, itemQuantity=0):
         """
         Default constructor
         :param item_name: the name of an item -> str
         :param item_price: the price of an item -> float
         :param item_quantity: the quantity of an item -> int=
         """
-        self.item_name = item_name
-        self.item_price = item_price
-        self.item_quantity = item_quantity
+        self.itemName = itemName
+        self.itemPrice = itemPrice
+        self.itemQuantity = itemQuantity
 
-    def total_cost(self) -> float:
+    def calculate_total_cost(self) -> float:
         """
-        Calculate the total cost of quantity x price
+        Calculate the total cost of the quantity x price
         :return: total cost
         """
-        return self.item_quantity * self.item_price
+        return self.itemQuantity * self.itemPrice
 
     def print_item_cost(self):
         """
         Display the item name and the total cost
         :return: void
         """
-        print("{} {} @ ${} = ${:.2f}".format(self.item_name,
-                                             self.item_quantity,
-                                             self.item_price,
-                                             self.total_cost()))
+        print("{} {} @ ${} = ${:.2f}".format(self.itemName,
+              self.itemQuantity, self.itemPrice, self.calculate_total_cost()))
